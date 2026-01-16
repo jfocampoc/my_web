@@ -15,29 +15,31 @@ body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f4f4; colo
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
     padding: 20px;
+    text-align: center;
 }
 
 .icon-box {
-    text-align: center;
+    width: 80px; /* Ancho del contenedor */
     transition: transform 0.3s ease;
 }
 
-.icon-box i {
-    font-size: 3.5rem; /* Tamaño de los iconos */
+.icon-box img {
+    width: 60px;  /* Tamaño de la imagen */
+    height: 60px;
     display: block;
-    margin-bottom: 8px;
+    margin: 0 auto 10px;
 }
 
 .icon-box span {
     font-weight: bold;
-    color: #555;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    color: #333;
 }
 
 .icon-box:hover {
-    transform: translateY(-10px); /* Efecto al pasar el mouse */
+    transform: scale(1.2); /* Efecto de aumento al pasar el mouse */
 }
 /* About Page Background */
 .about-page { 
@@ -47,4 +49,5 @@ body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f4f4; colo
 .glass-effect { background: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 15px; margin-top: 50px; }
 
 .container { max-width: 900px; margin: 20px auto; padding: 20px; }
+
 
