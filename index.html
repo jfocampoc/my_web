@@ -1,68 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhonatan Felipe | Software Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <nav class="navbar">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">Experience & Education</a>
-    </nav>
+<!-- Botón para abrir el menú lateral -->
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+  ☰
+</button>
 
-    <header class="hero">
-        <div class="hero-content">
-            <img src="perfil.jpeg" alt="Jhonatan Felipe" class="profile-img">
-            <h1>JHONATAN FELIPE OCAMPO</h1>
-            <p>Systems Engineering Student | Aspiring Software Developer</p>
-            <div class="social-links">
-                <a href="mailto:jfocampoc@hotmail.com" title="Email Me"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/jfocampoc" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/jhonatan-felipe-ocampo-cardona-2678193b9/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </header>
+<!-- Fondo oscuro/Overlay al abrir el menú -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <main class="container">
-        <section class="bio-intro">
-            <h2>Professional Profile</h2>
-            <p>I am a Systems Engineering student at the <strong>University of Caldas</strong> with a passion for software development and creating efficient digital solutions. Currently seeking opportunities to contribute to international teams and grow as a Full-Stack developer.</p>
-        </section>
+<!-- Menú Lateral (Sidebar) -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h3>Navegación</h3>
+    <button class="close-btn" id="closeBtn" aria-label="Cerrar menú">&times;</button>
+  </div>
+  <nav class="sidebar-nav">
+    <ul>
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+      <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+      <!-- Nuevas Secciones -->
+      <li><a href="#caso-estudio-crud" class="nav-link">Caso de Estudio: CRUD</a></li>
+      <li><a href="#datos-externos" class="nav-link">Datos en Vivo (API)</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+  </nav>
+</aside>
 
-        <h2 style="text-align: center; margin-top: 40px;">Technical Stack</h2>
-        <div class="tech-icons">
-            <div class="icon-box">
-                <img src="html5.png" alt="HTML5">
-                <span>HTML5</span>
-            </div>
-            <div class="icon-box">
-                <img src="css.png" alt="CSS3">
-                <span>CSS3</span>
-            </div>
-            <div class="icon-box">
-                <img src="js.png" alt="JavaScript">
-                <span>JavaScript</span>
-            </div>
-            <div class="icon-box">
-                <img src="piton.png" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="icon-box">
-                <img src="sql.png" alt="SQL">
-                <span>SQL</span>
-            </div>
-            <div class="icon-box">
-                <img src="git.png" alt="Git">
-                <span>Git</span>
-            </div>
-        </div>
-    </main>
+<!-- Contenedores para las nuevas secciones en el cuerpo principal -->
+<main class="main-content">
+  <!-- Tus secciones actuales van aquí... -->
 
-    <footer style="text-align: center; padding: 40px; color: #777;">
-        <p>&copy; 2026 Jhonatan Felipe Ocampo. Built from scratch.</p>
-    </footer>
-</body>
-</html>
+  <!-- Sección Caso de Estudio: CRUD -->
+  <section id="caso-estudio-crud" class="section">
+    <h2>Caso de Estudio: Demo CRUD</h2>
+    <p>Aquí construiremos la interfaz interactiva para Crear, Leer, Actualizar y Eliminar registros.</p>
+    <div id="crud-container" class="demo-box">
+      <!-- Lo implementaremos en el siguiente paso -->
+    </div>
+  </section>
+
+  <!-- Sección Datos Externos -->
+  <section id="datos-externos" class="section">
+    <h2>Integración con Base de Datos Externa</h2>
+    <p>Visualización de registros consumidos en tiempo real desde una API / Base de Datos remota.</p>
+    <div id="api-data-container" class="demo-box">
+      <!-- Lo implementaremos en el siguiente paso -->
+    </div>
+  </section>
+</main>
