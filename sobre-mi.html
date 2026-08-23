@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mí | Jhonatan Felipe Ocampo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Botón Menú Lateral -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Menú Lateral -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Navegación</h3>
+      <button class="close-btn" id="closeBtn" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="sobre-mi.html" class="nav-link active">Sobre mí</a></li>
+        <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+        <li><a href="crud.html" class="nav-link">Caso de Estudio: CRUD</a></li>
+        <li><a href="datos.html" class="nav-link">Datos en Vivo (API)</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Envoltorio Principal del Perfil -->
+  <main class="cv-page-wrapper">
+
+    <!-- Barra Superior de Acciones -->
+    <div class="cv-action-bar">
+      <a href="CV jhonatan felipe ocampo.pdf" download="CV jhonatan felipe ocampo.pdf" target="_blank" class="download-btn">
+  📥     Descargar CV en PDF
+      </a>
+    </div>
+
+    <!-- Hoja de Vida con Estructura de 2 Columnas -->
+    <div class="cv-container">
+
+      <!-- COLUMNA IZQUIERDA (Barra Lateral Oscura) -->
+      <aside class="cv-sidebar">
+        <div class="cv-photo-box">
+          <img src="./perfil.jpeg" alt="Jhonatan Felipe Ocampo">
+        </div>
+
+        <section class="cv-side-block">
+          <h2>SOBRE MÍ</h2>
+          <p>Estudiante de Ingeniería de Sistemas con sólida formación en mantenimiento de infraestructura informática, administración de bases de datos y desarrollo web. Experiencia práctica en soporte técnico organizacional, diagnóstico de hardware y despliegue de soluciones tecnológicas.</p>
+        </section>
+
+        <section class="cv-side-block">
+          <h2>EDUCACIÓN</h2>
+
+          <div class="cv-side-item" style="margin-bottom: 12px;">
+            <h3>UNIVERSIDAD DE CALDAS</h3>
+            <span class="cv-subtext">Ingeniería de Sistemas</span>
+            <span class="cv-year">En curso</span>
+          </div>
+
+          <div class="cv-side-item">
+            <h3>SISTEMPLUS</h3>
+            <span class="cv-subtext">Técnico en Sistemas</span>
+            <span class="cv-year">Graduado</span>
+          </div>
+        </section>
+
+        <section class="cv-side-block">
+          <h2>CONTACTO</h2>
+          <ul class="cv-contact-list">
+            <li>📍 Villamaría / Manizales, Caldas</li>
+            <li>🌐 jfocampoc.com</li>
+            <li>💼 LinkedIn / GitHub</li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- COLUMNA DERECHA (Contenido Principal) -->
+      <section class="cv-main-content">
+
+        <header class="cv-header">
+          <h1>JHONATAN FELIPE OCAMPO</h1>
+          <p class="cv-title">INGENIERÍA DE SISTEMAS / TICS E INFRAESTRUCTURA</p>
+        </header>
+
+        <section class="cv-main-block">
+          <h2 class="cv-section-title">EXPERIENCIA</h2>
+          <hr class="cv-divider">
+
+          <div class="cv-job-item">
+            <div class="cv-job-header">
+              <h3>ALCALDÍA MUNICIPAL DE VILLAMARÍA</h3>
+              <span class="cv-job-role">Contratista de TICs e Infraestructura TI</span>
+            </div>
+            <ul class="cv-job-bullets">
+              <li>Mantenimiento preventivo, correctivo e inventariado del parque informático en múltiples dependencias municipales.</li>
+              <li>Elaboración de informes técnicos de diagnóstico, estado, recomendaciones operativas y baja de equipos informáticos.</li>
+              <li>Gestión de respaldos de información, configuración de redes locales y aplicación de políticas de seguridad informática.</li>
+            </ul>
+          </div>
+
+          <div class="cv-job-item">
+            <div class="cv-job-header">
+              <h3>DESARROLLO WEB & PROYECTOS INDEPENDIENTES</h3>
+              <span class="cv-job-role">Desarrollador Frontend & Backend</span>
+            </div>
+            <ul class="cv-job-bullets">
+              <li>Diseño, maquetación y despliegue de sitios web personales y aplicaciones interactivas con dominio personalizado en GitHub Pages.</li>
+              <li>Construcción de módulos CRUD estructurados con HTML5, CSS3 y JavaScript.</li>
+              <li>Diseño de arquitecturas de bases de datos relacionales (SQL) para proyectos de análisis de información.</li>
+            </ul>
+          </div>
+        </section>
+
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

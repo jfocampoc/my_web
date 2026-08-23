@@ -1,4 +1,3 @@
-/* Resets y Configuración Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,33 +6,33 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0f172a; /* Fondo oscuro principal */
+  background-color: #0f172a;
   color: #f8fafc;
   line-height: 1.6;
-  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Botón Hamburguesa */
+/* --- Botón Hamburguesa Fijo a la Izquierda --- */
 .menu-toggle {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 1000;
   background-color: #2563eb;
   color: #ffffff;
   border: none;
-  padding: 12px 16px;
+  padding: 10px 15px;
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .menu-toggle:hover {
@@ -41,31 +40,31 @@ body {
   transform: scale(1.05);
 }
 
-/* Sidebar (Menú Lateral) */
+/* --- Sidebar Desplegable desde la Izquierda --- */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -300px; /* Oculto por defecto */
+  left: -280px; /* Completamente oculto por defecto a la izquierda */
   width: 280px;
   height: 100vh;
   background-color: #1e293b;
   color: #ffffff;
   z-index: 1002;
-  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar.active {
-  right: 0; /* Desplegado */
+  left: 0; /* Aparece al hacer clic */
 }
 
 .sidebar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 20px;
+  padding: 20px;
   border-bottom: 1px solid #334155;
 }
 
@@ -94,19 +93,20 @@ body {
 
 .sidebar-nav li a {
   display: block;
-  padding: 14px 24px;
+  padding: 14px 20px;
   color: #cbd5e1;
   text-decoration: none;
   font-size: 1rem;
   transition: background 0.2s, color 0.2s;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li a:hover,
+.sidebar-nav li a.active {
   background-color: #334155;
   color: #38bdf8;
 }
 
-/* Overlay (Fondo oscuro) */
+/* --- Fondo Oscuro (Overlay) --- */
 .sidebar-overlay {
   position: fixed;
   top: 0;
@@ -126,60 +126,246 @@ body {
   visibility: visible;
 }
 
-/* Secciones y Maquetación */
+/* --- Sección Hero Centrada --- */
 .hero-section {
-  padding: 100px 0 60px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  padding: 40px 20px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2563eb;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tech-icons-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  background-color: #1e293b;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid #334155;
+}
+
+.tech-icons-row img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.tech-icons-row img:hover {
+  transform: scale(1.25);
 }
 
 .hero-section h1 {
-  font-size: 2.5rem;
-  color: #f8fafc;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
 }
 
 .subtitle {
   color: #38bdf8;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
 }
 
-.section {
-  padding: 60px 0;
-  border-bottom: 1px solid #1e293b;
+.intro-text {
+  color: #94a3b8;
+  max-width: 500px;
 }
 
-.section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #f1f5f9;
+/* --- Estilos para la Página del CV (sobre-mi.html) --- */
+.cv-page-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+.cv-action-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }
 
-.card {
-  background-color: #1e293b;
-  padding: 24px;
+.download-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.cv-container {
+  display: flex;
+  background-color: #ffffff;
+  color: #1e293b;
   border-radius: 12px;
-  border: 1px solid #334155;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.card h3 {
+.cv-sidebar {
+  width: 35%;
+  background-color: #334155;
+  color: #f8fafc;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cv-photo-box {
+  text-align: center;
+}
+
+.cv-photo-box img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+}
+
+.cv-side-block h2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
   color: #38bdf8;
+  border-bottom: 2px solid #475569;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.cv-side-block p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.cv-side-item h3 {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.cv-subtext {
+  display: block;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.cv-year {
+  display: inline-block;
+  font-size: 0.75rem;
+  background-color: #1e293b;
+  color: #38bdf8;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.cv-contact-list {
+  list-style: none;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cv-main-content {
+  width: 65%;
+  padding: 40px 35px;
+  background-color: #ffffff;
+}
+
+.cv-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.cv-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.cv-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.cv-divider {
+  border: none;
+  height: 3px;
+  background-color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.cv-job-item {
+  margin-bottom: 25px;
+}
+
+.cv-job-header h3 {
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.cv-job-role {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2563eb;
   margin-bottom: 8px;
 }
 
-.demo-box {
-  background-color: #1e293b;
-  border: 2px dashed #334155;
-  border-radius: 12px;
-  padding: 30px;
-  margin-top: 20px;
-  text-align: center;
-  color: #94a3b8;
+.cv-job-bullets {
+  padding-left: 18px;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.cv-job-bullets li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+  }
+  .cv-sidebar, .cv-main-content {
+    width: 100%;
+  }
 }

@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jhonatan Felipe Ocampo | Portafolio</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Fuentes e Iconos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Botón Hamburguesa Fijo -->
+  <!-- Botón Menú a la Izquierda -->
   <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
     ☰
   </button>
 
-  <!-- Overlay para cerrar menú al dar clic fuera -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
   <!-- Menú Lateral Desplegable -->
@@ -28,82 +26,38 @@
     </div>
     <nav class="sidebar-nav">
       <ul>
-        <li><a href="#inicio" class="nav-link">Inicio</a></li>
-        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-        <li><a href="#crud-demo" class="nav-link">Caso de Estudio: CRUD</a></li>
-        <li><a href="#datos-externos" class="nav-link">Datos en Vivo (API)</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li><a href="index.html" class="nav-link active">Inicio</a></li>
+        <li><a href="sobre-mi.html" class="nav-link">Sobre mí</a></li>
+        <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+        <li><a href="crud.html" class="nav-link">Caso de Estudio: CRUD</a></li>
+        <li><a href="datos.html" class="nav-link">Datos en Vivo (API)</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
       </ul>
     </nav>
   </aside>
 
   <!-- Contenido Principal -->
   <main class="main-content">
-    
-    <!-- Inicio -->
-    <section id="inicio" class="hero-section">
-      <div class="container">
+    <section class="hero-section">
+      <div class="container hero-container">
+        <!-- Foto de Perfil -->
+        <img src="./perfil.jpeg" alt="Jhonatan Felipe Ocampo" class="profile-img">
+
+        <!-- Íconos de Tecnologías debajo de la foto -->
+        <div class="tech-icons-row">
+          <img src="./html5.png" alt="HTML5" title="HTML5">
+          <img src="./css.png" alt="CSS3" title="CSS3">
+          <img src="./js.png" alt="JavaScript" title="JavaScript">
+          <img src="./piton.png" alt="Python" title="Python">
+          <img src="./sql.png" alt="SQL" title="SQL">
+          <img src="./git.png" alt="Git" title="Git">
+        </div>
+
         <h1>Jhonatan Felipe Ocampo</h1>
         <p class="subtitle">Sistemas, Desarrollo Web e Infraestructura TI</p>
+        <p class="intro-text">Bienvenido a mi sitio web personal. Utiliza el menú lateral para explorar mi información, proyectos y casos de estudio.</p>
       </div>
     </section>
-
-    <!-- Sobre mí -->
-    <section id="sobre-mi" class="section">
-      <div class="container">
-        <h2>Sobre mí</h2>
-        <p>Bienvenido a mi portafolio profesional. Aquí puedes explorar mis proyectos, desarrollos web e integraciones de bases de datos.</p>
-      </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section id="proyectos" class="section">
-      <div class="container">
-        <h2>Proyectos Destacados</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Portafolio Web</h3>
-            <p>Diseño y despliegue de plataforma personal optimizada para GitHub Pages.</p>
-          </div>
-          <div class="card">
-            <h3>Gestión de Infraestructura</h3>
-            <p>Mantenimiento, soporte técnico y logs de datos para sistemas informáticos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Caso de Estudio: CRUD -->
-    <section id="crud-demo" class="section">
-      <div class="container">
-        <h2>Caso de Estudio: Demo CRUD</h2>
-        <p>Módulo interactivo para la gestión de registros (Crear, Leer, Actualizar y Eliminar).</p>
-        <div class="demo-box">
-          <p><em>[Espacio preparado para la interfaz interactiva del CRUD]</em></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Datos Externos -->
-    <section id="datos-externos" class="section">
-      <div class="container">
-        <h2>Integración con Base de Datos Externa</h2>
-        <p>Visualización de datos en tiempo real consumidos mediante API externa / Servidor remoto.</p>
-        <div class="demo-box">
-          <p><em>[Espacio preparado para renderizar la tabla o lista de datos externos]</em></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="section">
-      <div class="container">
-        <h2>Contacto</h2>
-        <p>¿Tienes alguna consulta o propuesta de proyecto? ¡Hablemos!</p>
-      </div>
-    </section>
-
   </main>
 
   <script src="script.js"></script>
