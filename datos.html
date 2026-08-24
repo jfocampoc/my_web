@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos en Vivo | Jhonatan Felipe Ocampo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Botón Menú Lateral -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Menú Lateral -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Navegación</h3>
+      <button class="close-btn" id="closeBtn" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="sobre-mi.html" class="nav-link">Sobre mí</a></li>
+        <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+        <li><a href="crud.html" class="nav-link">Caso de Estudio: CRUD</a></li>
+        <li><a href="datos.html" class="nav-link active">Datos en Vivo (API)</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido Principal -->
+  <main class="page-container">
+    <header class="page-header">
+      <h1>Análisis de Datos en Tiempo Real</h1>
+      <p>Integración con API REST externa y visualización analítica.</p>
+    </header>
+
+    <section style="text-align: center; padding: 60px 20px; background-color: #1e293b; border-radius: 12px; border: 1px solid #334155; margin-top: 20px;">
+      <span style="font-size: 3rem;">📊</span>
+      <h2 style="margin-top: 15px; color: #38bdf8;">Módulo en Desarrollo</h2>
+      <p style="color: #94a3b8; max-width: 500px; margin: 10px auto;">Conectando servicios API y paneles de control con Chart.js. Esta sección estará lista muy pronto.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
